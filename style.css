@@ -1,0 +1,146 @@
+/* تنظیمات پایه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* دکمه تغییر زبان */
+.lang-switcher {
+    text-align: left;
+    padding: 15px 30px;
+    background-color: #0a0a0a;
+}
+
+.lang-switcher button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.lang-switcher button:hover {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* کنترل نمایش متن‌ها بر اساس حالت زبان */
+/* حالت پیش‌فرض: فارسی */
+body.lang-fa-mode .lang-en {
+    display: none !important;
+}
+body.lang-fa-mode .lang-fa {
+    display: block;
+}
+/* برای دکمه‌ها و المان‌های inline */
+span.lang-fa, span.lang-en {
+    display: inline;
+}
+
+/* حالت انگلیسی */
+body.lang-en-mode .lang-fa {
+    display: none !important;
+}
+body.lang-en-mode .lang-en {
+    display: block;
+}
+
+/* استایل هدر */
+header {
+    background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 3px solid #e74c3c;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #bbb;
+}
+
+/* شبکه نمایش ماشین‌ها */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.car-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    padding: 15px 15px 5px 15px;
+    color: #fff;
+}
+
+.car-card p {
+    padding: 0 15px 15px 15px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* دکمه‌ها */
+.btn {
+    display: block;
+    width: 85%;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* فوتر */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a0a;
+    color: #777;
+    border-top: 1px solid #222;
+}
