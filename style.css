@@ -7,9 +7,9 @@
 }
 
 body {
-    background-color: #121212;
-    color: #f1f1f1;
-    line-height: 1.6;
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    line-height: 1.7;
 }
 
 .container {
@@ -18,129 +18,201 @@ body {
     margin: 0 auto;
 }
 
-/* دکمه تغییر زبان */
-.lang-switcher {
-    text-align: left;
-    padding: 15px 30px;
-    background-color: #0a0a0a;
+/* ناوبری */
+.navbar {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f43f5e;
 }
 
 .lang-switcher button {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #555;
-    padding: 8px 15px;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #f43f5e, #e11d48);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: background 0.3s;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 .lang-switcher button:hover {
-    background-color: #e74c3c;
-    border-color: #e74c3c;
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
-/* کنترل نمایش متن‌ها بر اساس حالت زبان */
-/* حالت پیش‌فرض: فارسی */
-body.lang-fa-mode .lang-en {
-    display: none !important;
-}
-body.lang-fa-mode .lang-fa {
-    display: block;
-}
-/* برای دکمه‌ها و المان‌های inline */
-span.lang-fa, span.lang-en {
-    display: inline;
-}
-
-/* حالت انگلیسی */
-body.lang-en-mode .lang-fa {
-    display: none !important;
-}
-body.lang-en-mode .lang-en {
-    display: block;
-}
-
-/* استایل هدر */
-header {
-    background: linear-gradient(135deg, #1f1f1f, #2c3e50);
-    padding: 40px 0;
+/* هدر / بنر اصلی */
+.hero {
+    background: linear-gradient(rgba(11, 15, 25, 0.7), rgba(11, 15, 25, 0.9)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    padding: 160px 0 80px 0;
     text-align: center;
-    border-bottom: 3px solid #e74c3c;
+    border-bottom: 2px solid #1e293b;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #e74c3c;
-    margin-bottom: 10px;
+.hero-content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-header p {
-    color: #bbb;
+.hero-content p {
+    color: #94a3b8;
+    font-size: 1.2rem;
 }
 
-/* شبکه نمایش ماشین‌ها */
+/* بخش اصلی و محصولات */
+.main-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #f8fafc;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f43f5e;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
 .car-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    padding: 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .car-card {
-    background-color: #1e1e1e;
-    border-radius: 10px;
+    background-color: #1e293b;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .car-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(244, 63, 94, 0.15);
+}
+
+.img-container {
+    position: relative;
+    height: 220px;
 }
 
 .car-card img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
 }
 
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(244, 63, 94, 0.9);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+body.lang-en-mode .badge {
+    right: auto;
+    left: 15px;
+}
+
+.card-body {
+    padding: 24px;
+}
+
 .car-card h3 {
-    padding: 15px 15px 5px 15px;
-    color: #fff;
+    font-size: 1.4rem;
+    color: #f8fafc;
+    margin-bottom: 10px;
 }
 
 .car-card p {
-    padding: 0 15px 15px 15px;
-    color: #aaa;
-    font-size: 0.9rem;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.car-specs {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f172a;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
 }
 
 /* دکمه‌ها */
 .btn {
     display: block;
-    width: 85%;
-    margin: 0 auto 20px auto;
-    padding: 10px;
-    background-color: #e74c3c;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #f43f5e, #e11d48);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: opacity 0.2s, transform 0.2s;
 }
 
 .btn:hover {
-    background-color: #c0392b;
+    opacity: 0.9;
+    transform: scale(1.02);
 }
 
 /* فوتر */
 footer {
+    background-color: #0f172a;
+    border-top: 1px solid #1e293b;
+    padding: 30px 0;
     text-align: center;
-    padding: 20px;
-    background-color: #0a0a0a;
-    color: #777;
-    border-top: 1px solid #222;
+    color: #64748b;
+    font-size: 0.9rem;
 }
+
+/* کنترل زبان */
+body.lang-fa-mode .lang-en { display: none !important; }
+body.lang-fa-mode .lang-fa { display: block; }
+span.lang-fa, span.lang-en { display: inline; }
+
+body.lang-en-mode .lang-fa { display: none !important; }
+body.lang-en-mode .lang-en { display: block; }
