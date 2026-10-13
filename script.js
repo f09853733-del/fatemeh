@@ -23,3 +23,13 @@ function showInfo(carName) {
         alert("با تشکر! درخواست استعلام قیمت خودروی '" + carName + "' با موفقیت ثبت شد.");
     }
 }
+
+function submitForm(event) {
+    event.preventDefault();
+    const isEnglish = document.body.classList.contains('lang-en-mode');
+    if (isEnglish) {
+        alert("Your message has been sent successfully! We will contact you soon.");
+    } else {
+        alert("پیام شما با موفقیت ارسال شد! به‌زودی با شما تماس خواهیم گرفت.");
+    }
+}
