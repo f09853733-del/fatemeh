@@ -15,12 +15,12 @@ function switchLanguage() {
     }
 }
 
-function showInfo(carName) {
+function joinAction(gameName) {
     const isEnglish = document.body.classList.contains('lang-en-mode');
     if (isEnglish) {
-        alert("Thank you! Your inquiry request for '" + carName + "' has been successfully registered.");
+        alert("Success! Your registration request for '" + gameName + "' tournament has been submitted.");
     } else {
-        alert("با تشکر! درخواست استعلام قیمت خودروی '" + carName + "' با موفقیت ثبت شد.");
+        alert("موفقیت‌آمیز! درخواست ثبت‌نام شما برای تورنمنت '" + gameName + "' ثبت شد.");
     }
 }
 
@@ -28,8 +28,8 @@ function submitForm(event) {
     event.preventDefault();
     const isEnglish = document.body.classList.contains('lang-en-mode');
     if (isEnglish) {
-        alert("Your message has been sent successfully! We will contact you soon.");
+        alert("Your message has been sent successfully! We will get in touch with you via Discord/Email.");
     } else {
-        alert("پیام شما با موفقیت ارسال شد! به‌زودی با شما تماس خواهیم گرفت.");
+        alert("پیام شما با موفقیت ارسال شد! به‌زودی از طریق دیسکورد یا ایمیل با شما در ارتباط خواهیم بود.");
     }
 }
