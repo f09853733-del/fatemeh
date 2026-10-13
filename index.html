@@ -1,81 +1,124 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دنیای ماشین‌ها | Car World</title>
-    <link rel="stylesheet" href="style.css">
+    <title class="lang-fa">نمایشگاه خودرو آرنادینک | Arnadinc</title>
+    <title class="lang-en">Arnadinc Car Showroom</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="lang-fa-mode">
 
-    <!-- هدر و منوی سایت -->
-    <header>
-        <div class="logo">🚗 CarWorld</div>
-        <nav>
-            <ul>
-                <li><a href="#home">خانه</a></li>
-                <li><a href="#cars">خودروها</a></li>
-                <li><a href="#about">درباره ما</a></li>
-                <li><a href="#contact">ارتباط با ما</a></li>
-            </ul>
-        </nav>
+    <!-- ناوبری بالای صفحه -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="lang-fa">🔥 آرنادینک کارز</span>
+                <span class="lang-en">🔥 Arnadinc Cars</span>
+            </div>
+            <div class="lang-switcher">
+                <button onclick="switchLanguage()">🌐 English / فارسی</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- بنر اصلی هدر -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="lang-fa">نسل جدید خودروهای لوکس و اسپرت</h1>
+            <h1 class="lang-en">The New Era of Luxury & Sport Cars</h1>
+            <p class="lang-fa">تجربه سرعت، قدرت و مهندسی بی‌نظیر در یک نگاه</p>
+            <p class="lang-en">Experience speed, power, and unmatched engineering</p>
+        </div>
     </header>
 
-    <!-- بخش اصلی (بنر) -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>به دنیای سرعت و هیجان خوش آمدید</h1>
-            <p>برترین و جدیدترین خودروهای اسپرت و لوکس جهان را با ما تجربه کنید.</p>
-            <a href="#cars" class="btn">مشاهده خودروها</a>
-        </div>
-    </section>
-
-    <!-- بخش معرفی خودروها -->
-    <section id="cars" class="cars-section">
-        <h2>خودروهای منتخب</h2>
+    <!-- بخش محصولات -->
+    <main class="container main-section">
+        <h2 class="section-title lang-fa">محضولات ویژه</h2>
+        <h2 class="section-title lang-en">Featured Vehicles</h2>
+        
         <div class="car-grid">
+            
+            <!-- خودرو اول -->
             <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e" alt="ماشین اسپرت">
-                <h3>بی‌ام‌و سری M</h3>
-                <p>قدرت، اصالت و طراحی بی‌نظیر برای عاشقان رانندگی پرسرعت.</p>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80" alt="Porsche">
+                    <span class="badge lang-fa">ویژه</span>
+                    <span class="badge lang-en">Special</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="lang-fa">پورشه ۹۱۱ جی‌تی‌تری</h3>
+                    <h3 class="lang-en">Porsche 911 GT3</h3>
+                    <p class="lang-fa">عملکرد فوق‌العاده در پیست و جاده با موتور ۶ سیلندر خطی</p>
+                    <p class="lang-en">Outstanding track and road performance with flat-6 engine</p>
+                    <div class="car-specs">
+                        <span class="lang-fa">⚡ ۵۰۲ اسب بخار</span>
+                        <span class="lang-en">⚡ 502 HP</span>
+                        <span class="lang-fa">⏱️ ۳.۲ ثانیه</span>
+                        <span class="lang-en">⏱️ 3.2s 0-100</span>
+                    </div>
+                    <button class="btn lang-fa" onclick="showInfo('پورشه ۹۱۱ جی‌تی‌تری')">استعلام قیمت آنلاین</button>
+                    <button class="btn lang-en" onclick="showInfo('Porsche 911 GT3')">Inquiry Price</button>
+                </div>
             </div>
+
+            <!-- خودرو دوم -->
             <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738" alt="ماشین لوکس">
-                <h3>پورشه ۹۱۱</h3>
-                <p>ترکیبی خیره‌کننده از اصالت کلاسیک و تکنولوژی مدرن آلمانی.</p>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80" alt="Supercar">
+                    <span class="badge lang-fa">محبوب</span>
+                    <span class="badge lang-en">Popular</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="lang-fa">لامبورگینی هوراکان</h3>
+                    <h3 class="lang-en">Lamborghini Huracan</h3>
+                    <p class="lang-fa">طراحی تهاجمی، صدای اگزوز فراموش‌نشدنی و سرعت خیره‌کننده</p>
+                    <p class="lang-en">Aggressive design, unforgettable exhaust note, and breathtaking speed</p>
+                    <div class="car-specs">
+                        <span class="lang-fa">⚡ ۶۳۰ اسب بخار</span>
+                        <span class="lang-en">⚡ 630 HP</span>
+                        <span class="lang-fa">⏱️ ۲.۹ ثانیه</span>
+                        <span class="lang-en">⏱️ 2.9s 0-100</span>
+                    </div>
+                    <button class="btn lang-fa" onclick="showInfo('لامبورگینی هوراکان')">استعلام قیمت آنلاین</button>
+                    <button class="btn lang-en" onclick="showInfo('Lamborghini Huracan')">Inquiry Price</button>
+                </div>
             </div>
+
+            <!-- خودرو سوم -->
             <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a" alt="سوپراسپرت">
-                <h3>لامبورگینی اونتادور</h3>
-                <p>هیولای ایتالیایی با شتابی باورنکردنی و طراحی فضایی.</p>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Electric">
+                    <span class="badge lang-fa">الکتریکی</span>
+                    <span class="badge lang-en">Electric</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="lang-fa">تسلا مدل اس پلاید</h3>
+                    <h3 class="lang-en">Tesla Model S Plaid</h3>
+                    <p class="lang-fa">سریع‌ترین سدان تولیدی جهان با فناوری کاملاً خودران</p>
+                    <p class="lang-en">The world's fastest production sedan with full self-driving tech</p>
+                    <div class="car-specs">
+                        <span class="lang-fa">⚡ ۱,۰۲۰ اسب بخار</span>
+                        <span class="lang-en">⚡ 1,020 HP</span>
+                        <span class="lang-fa">⏱️ ۱.۹۹ ثانیه</span>
+                        <span class="lang-en">⏱️ 1.99s 0-100</span>
+                    </div>
+                    <button class="btn lang-fa" onclick="showInfo('تسلا مدل اس پلاید')">استعلام قیمت آنلاین</button>
+                    <button class="btn lang-en" onclick="showInfo('Tesla Model S Plaid')">Inquiry Price</button>
+                </div>
             </div>
+
         </div>
-    </section>
+    </main>
 
-    <!-- بخش درباره ما -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>درباره ما</h2>
-            <p>ما در «دنیای ماشین‌ها» تلاش می‌کنیم تا جدیدترین اخبار، بررسی‌ها و تصاویر باکیفیت از جذاب‌ترین خودروهای صنعت خودروسازی را برای علاقه‌مندان به نمایش بگذاریم.</p>
-        </div>
-    </section>
-
-    <!-- بخش ارتباط با ما -->
-    <section id="contact" class="contact-section">
-        <h2>ارتباط با ما</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="نام شما" required>
-            <input type="email" id="email" placeholder="ایمیل شما" required>
-            <textarea id="message" placeholder="پیام خود را بنویسید..." rows="5" required></textarea>
-            <button type="submit" class="btn">ارسال پیام</button>
-        </form>
-    </section>
-
-    <!-- فوتر -->
+    <!-- فوتر پیشرفته -->
     <footer>
-        <p>تمامی حقوق محفوظ است &copy; ۱۴۰۵ - دنیای ماشین‌ها</p>
+        <div class="container footer-content">
+            <p class="lang-fa">تمامی حقوق برای نمایشگاه آرنادینک محفوظ است &copy; ۱۴۰۵ | arnadinc.com</p>
+            <p class="lang-en">All rights reserved for Arnadinc Showroom &copy; 2026 | arnadinc.com</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
