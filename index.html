@@ -16,6 +16,11 @@
                 <span class="lang-fa">🔥 آرنادینک کارز</span>
                 <span class="lang-en">🔥 Arnadinc Cars</span>
             </div>
+            <ul class="nav-links">
+                <li><a href="#cars" class="lang-fa">محصولات</a><a href="#cars" class="lang-en">Cars</a></li>
+                <li><a href="#gallery" class="lang-fa">گالری تصاویر</a><a href="#gallery" class="lang-en">Gallery</a></li>
+                <li><a href="#contact" class="lang-fa">ارتباط با ما</a><a href="#contact" class="lang-en">Contact</a></li>
+            </ul>
             <div class="lang-switcher">
                 <button onclick="switchLanguage()">🌐 English / فارسی</button>
             </div>
@@ -27,14 +32,16 @@
         <div class="container hero-content">
             <h1 class="lang-fa">نسل جدید خودروهای لوکس و اسپرت</h1>
             <h1 class="lang-en">The New Era of Luxury & Sport Cars</h1>
-            <p class="lang-fa">تجربه سرعت، قدرت و مهندسی بی‌نظیر در یک نگاه</p>
-            <p class="lang-en">Experience speed, power, and unmatched engineering</p>
+            <p class="lang-fa">تجربه سرعت، قدرت و مهندسی بی‌نظیر در arnadinc.com</p>
+            <p class="lang-en">Experience speed, power, and unmatched engineering at arnadinc.com</p>
+            <a href="#cars" class="hero-btn lang-fa">مشاهده خودروها</a>
+            <a href="#cars" class="hero-btn lang-en">Explore Cars</a>
         </div>
     </header>
 
     <!-- بخش محصولات -->
-    <main class="container main-section">
-        <h2 class="section-title lang-fa">محضولات ویژه</h2>
+    <main class="container main-section" id="cars">
+        <h2 class="section-title lang-fa">محصولات ویژه</h2>
         <h2 class="section-title lang-en">Featured Vehicles</h2>
         
         <div class="car-grid">
@@ -110,6 +117,49 @@
 
         </div>
     </main>
+
+    <!-- بخش گالری تصاویر -->
+    <section class="container gallery-section" id="gallery">
+        <h2 class="section-title lang-fa">گالری تصاویر نمایشگاه</h2>
+        <h2 class="section-title lang-en">Showroom Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Car 1"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Car 2"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Car 3"></div>
+        </div>
+    </section>
+
+    <!-- بخش ارتباط با ما -->
+    <section class="container contact-section" id="contact">
+        <h2 class="section-title lang-fa">ارتباط با ما</h2>
+        <h2 class="section-title lang-en">Contact Us</h2>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 class="lang-fa">اطلاعات تماس آرنادینک</h3>
+                <h3 class="lang-en">Arnadinc Info</h3>
+                <p class="lang-fa">📍 آدرس: تهران، خیابان فرشته، پلاک ۱۱۰</p>
+                <p class="lang-en">📍 Address: 110 Fereshteh St, Tehran</p>
+                <p class="lang-fa">📞 تلفن: ۰۲۱-۸۸۸۸۸۸۸۸</p>
+                <p class="lang-en">📞 Phone: +98 21 88888888</p>
+                <p class="lang-fa">📧 ایمیل: info@arnadinc.com</p>
+                <p class="lang-en">📧 Email: info@arnadinc.com</p>
+            </div>
+            
+            <form class="contact-form" onsubmit="submitForm(event)">
+                <input type="text" class="lang-fa" placeholder="نام و نام خانوادگی" required>
+                <input type="text" class="lang-en" placeholder="Your Name" required>
+                
+                <input type="email" placeholder="ایمیل / Email" required>
+                
+                <textarea rows="4" class="lang-fa" placeholder="پیام یا درخواست خود را بنویسید..." required></textarea>
+                <textarea rows="4" class="lang-en" placeholder="Type your message..." required></textarea>
+                
+                <button type="submit" class="btn lang-fa">ارسال پیام</button>
+                <button type="submit" class="btn lang-en">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <!-- فوتر پیشرفته -->
     <footer>
